@@ -1,0 +1,39 @@
+1) install typescript compiler
+>npm install -g typescript
+
+2) create file hello.js
+let name1="jetking"
+console.log(name1)
+name1=546
+console.log(name1)
+
+>node hello.js
+
+3) create file file1.ts
+let name1="jetking"
+console.log(name1)
+name1=546
+console.log(name1)
+
+after copying compiler giving error for name1 variable
+>node file1.ts (without checking it gives o/p same js)
+BUT
+>tsc file1.ts  (strictly it is checking and giving for name1 and 
+ automatically creating file1.js)
+
+---------------------------
+
+Make changes in hello.js let name1 to var name1 and it file1.ts
+it will remove 1st line error
+
+
+>tsc file1.ts -w  (watching file if any chages are happening or not)
+>tsc file1.ts  --outfile file2.js (create new .js file)
+
+-----------------------------------
+inside root directory
+>tsc --init
+it creates tsconfig.json and you can edit types check rule
+
+
+
